@@ -33,6 +33,5 @@ if video:
     temp.write(v.read())
     video_path = temp.name
 
-clip = VideoFileClip(video_path)
-st.write(f"⏱️ Duration: {clip.duration} seconds")
-        st.write(f"⏱️ Duration: {clip.duration} seconds")
+    clip = VideoFileClip(video_path)
+    st.write(f"⏱️ Duration: {clip.duration} seconds")
