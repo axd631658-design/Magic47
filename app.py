@@ -24,3 +24,7 @@ music = st.file_uploader(
 
 if st.button("Create Reel"):
     st.success("🚀 Reel generation feature will be added soon!")
+if video:
+    st.write("Uploaded Videos:")
+    for v in video:
+        st.write(f"📹 {v.name}")
