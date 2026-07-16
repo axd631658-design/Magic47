@@ -28,3 +28,5 @@ if video:
     st.write("Uploaded Videos:")
     for v in video:
         st.write(f"📹 {v.name}")
+        clip = VideoFileClip(v)
+        st.write(f"⏱️ Duration: {clip.duration} seconds")
