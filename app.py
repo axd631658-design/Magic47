@@ -1,7 +1,6 @@
 import streamlit as st
 import tempfile
 from moviepy import VideoFileClip
-from pydub import AudioSegment
 st.set_page_config(page_title="Magic47 AI Reel Maker")
 
 st.title("🎬 Magic47 AI Reel Maker")
