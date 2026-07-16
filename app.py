@@ -1,5 +1,5 @@
 import streamlit as st
-
+from moviepy import VideoFileClip
 st.set_page_config(page_title="Magic47 AI Reel Maker")
 
 st.title("🎬 Magic47 AI Reel Maker")
