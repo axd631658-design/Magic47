@@ -29,9 +29,11 @@ if video:
     st.write("Uploaded Videos:")
     for v in video:
         st.write(f"📹 {v.name}")
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp:
-    temp.write(v.read())
-    video_path = temp.name
 
-    clip = VideoFileClip(video_path)
-    st.write(f"⏱️ Duration: {clip.duration} seconds")
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp:
+            temp.write(v.read())
+            video_path = temp.name
+
+        clip = VideoFileClip(video_path)
+        st.write(f"⏱️ Duration: {clip.duration} seconds")
+    
