@@ -1,4 +1,5 @@
 import streamlit as st
+import tempfile
 from moviepy import VideoFileClip
 st.set_page_config(page_title="Magic47 AI Reel Maker")
 
@@ -28,5 +29,10 @@ if video:
     st.write("Uploaded Videos:")
     for v in video:
         st.write(f"📹 {v.name}")
-        clip = VideoFileClip(v)
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp:
+    temp.write(v.read())
+    video_path = temp.name
+
+clip = VideoFileClip(video_path)
+st.write(f"⏱️ Duration: {clip.duration} seconds")
         st.write(f"⏱️ Duration: {clip.duration} seconds")
