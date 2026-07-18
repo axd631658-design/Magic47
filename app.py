@@ -17,7 +17,11 @@ video = st.file_uploader(
 voice = st.file_uploader(
     "Upload Voice",
     type=["mp3", "wav", "m4a"]
+voice = st.file_uploader(
+    "Upload Voice",
+    type=["mp3", "wav", "m4a"]
 )
+
 if voice:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp:
         temp.write(voice.read())
@@ -25,9 +29,11 @@ if voice:
 
     audio = AudioFileClip(audio_path)
     st.write(f"🎙️ Voice Duration: {audio.duration} seconds")
-    music = st.file_uploader(
+
+music = st.file_uploader(
     "Upload Background Music",
     type=["mp3", "wav"]
+
 )
 
 if st.button("Create Reel"):
