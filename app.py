@@ -53,6 +53,9 @@ if st.button("Create Reel"):
         total_voice = audio.duration
         total_clips = len(video)
         clip_time = total_voice / total_clips
+   st.write(f"🎙️ Voice Duration: {total_voice:.2f} sec")
+   st.write(f"📹 Total Clips: {total_clips}")
+   st.write(f"⏱️ Each Clip: {clip_time:.2f} sec")
 # Show Uploaded Video Durations
 if video:
     st.write("Uploaded Videos:")
