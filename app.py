@@ -50,6 +50,9 @@ if st.button("Create Reel"):
 
     else:
         st.success("✅ Starting AI Reel Generation...")
+        total_voice = audio.duration
+        total_clips = len(video)
+        clip_time = total_voice / total_clips
 # Show Uploaded Video Durations
 if video:
     st.write("Uploaded Videos:")
