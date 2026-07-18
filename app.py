@@ -25,14 +25,6 @@ if voice:
 
     audio = AudioFileClip(audio_path)
     st.write(f"🎙️ Voice Duration: {audio.duration} seconds")
- if voice and video:
-    total_voice = audio.duration
-    total_clips = len(video)
-    clip_time = total_voice / total_clips
-
-    st.subheader("🤖 AI Reel Plan")
-
-    st.write(f"🎙️ Voice Duration: {total_voice:.2f} sec")
     st.write(f"📹 Total Clips: {total_clips}")
 
     for i in range(total_clips):
