@@ -25,11 +25,7 @@ if voice:
 
     audio = AudioFileClip(audio_path)
     st.write(f"🎙️ Voice Duration: {audio.duration} seconds")
-    st.write(f"📹 Total Clips: {total_clips}")
-
-    for i in range(total_clips):
-        st.write(f"Clip {i+1} ➜ {clip_time:.2f} sec")
-music = st.file_uploader(
+    music = st.file_uploader(
     "Upload Background Music",
     type=["mp3", "wav"]
 )
