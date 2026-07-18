@@ -41,3 +41,21 @@ if voice:
 music_path = None
 if music:
     music_path = save_uploaded_file(music)
+st.divider()
+
+st.subheader("📊 Uploaded Files")
+
+if video_paths:
+    st.write(f"📹 Total Videos: {len(video_paths)}")
+
+    for i, path in enumerate(video_paths):
+        duration = get_video_duration(path)
+        st.write(f"Video {i+1}: {duration:.2f} sec")
+
+if voice_path:
+    duration = get_audio_duration(voice_path)
+    st.write(f"🎙️ Voice: {duration:.2f} sec")
+
+if music_path:
+    duration = get_audio_duration(music_path)
+    st.write(f"🎵 Music: {duration:.2f} sec")
