@@ -44,8 +44,12 @@ if music:
     st.write(f"🎵 Music Duration: {bg_music.duration:.2f} seconds")
 # Create Reel Button
 if st.button("Create Reel"):
-    st.success("🚀 Reel generation feature will be added soon!")
 
+    if not video or not voice:
+        st.error("Please upload videos and voice first.")
+
+    else:
+        st.success("✅ Starting AI Reel Generation...")
 # Show Uploaded Video Durations
 if video:
     st.write("Uploaded Videos:")
