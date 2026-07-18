@@ -24,3 +24,20 @@ music = st.file_uploader(
     "Upload Background Music",
     type=["mp3", "wav"]
 )
+
+# Save uploaded files
+
+video_paths = []
+
+if videos:
+    for video in videos:
+        path = save_uploaded_file(video)
+        video_paths.append(path)
+
+voice_path = None
+if voice:
+    voice_path = save_uploaded_file(voice)
+
+music_path = None
+if music:
+    music_path = save_uploaded_file(music)
