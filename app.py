@@ -57,9 +57,6 @@ if st.button("Create Reel"):
         st.write(f"📹 Total Clips: {total_clips}")
         st.write(f"⏱️ Each Clip: {clip_time:.2f} sec")
         st.subheader("🤖 AI Reel Plan")
-
-for i in range(total_clips):
-    st.write(f"Clip {i+1} ➜ {clip_time:.2f} sec")
 # Show Uploaded Video Durations
 if video:
     st.write("Uploaded Videos:")
