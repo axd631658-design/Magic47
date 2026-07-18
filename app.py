@@ -35,7 +35,13 @@ music = st.file_uploader(
     "Upload Background Music",
     type=["mp3", "wav"]
 )
+if music:
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp:
+        temp.write(music.read())
+        music_path = temp.name
 
+    bg_music = AudioFileClip(music_path)
+    st.write(f"🎵 Music Duration: {bg_music.duration:.2f} seconds")
 # Create Reel Button
 if st.button("Create Reel"):
     st.success("🚀 Reel generation feature will be added soon!")
